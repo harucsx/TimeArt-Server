@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>데이터 목록 <a href="/add"><button>랜덤 데이터 추가</button></a></h3>
+{% for data in datas %}
+    <div>[{{ data.created_at }}] Device ID : {{ data.device_id }} // PM2.5 : {{ data.dust25 }}
+        // PM10 : {{ data.dust100 }} // CO2 : {{ data.co2 }} // 불쾌지수 : {{ data.discomfort_index }} //
+    온도 : {{ data.temp }} // 습도 : {{ data.humid }}</div>
+{% endfor %}
+</body>
+</html>
